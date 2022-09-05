@@ -1,0 +1,24 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+<p>
+    <h1 style="color:black;">
+        SOHBET BOTU
+    </h1>
+</p>
+<form action="{% url 'chatbot_sonuc' %}" method="POST">
+  {% csrf_token %}
+  <textarea
+    name="metin"
+    class="form-control"
+    placeholder="Leave a comment here"
+    id="floatingTextarea2"
+    style="height: 100px"
+    cols="100"
+  ></textarea
+  ><br />
+  <button type="submit" class="btn btn-primary btn-lg">Gönder</button>
+</form>
+
+<div class="card">
+  <div class="card-body text-center">Sohbet Botu : {{result}}</div>
+</div>
+{% endblock %}

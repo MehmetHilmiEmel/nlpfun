@@ -1,0 +1,50 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+  rel="stylesheet"
+/>
+
+<div class="anabolum center">
+  <h1>Doğal Dil İşleme Etkinlikleri</h1>
+  <div class="cards">
+    <div class="card">
+      <h2 id="scrollspyHeading1" class="card-title">Metin Özetleme</h2>
+      <a href="{% url 'metin_summary' %}">
+        <img src="{% static 'pexels-pixabay-261857.jpg' %}" alt="" />
+        <p class="card-desc" style="color: black">
+          Metin özetleme; bir belgeyi/dokümanı matematiksel yöntemler kullanarak
+          kısa paragraflar veya ifadeler halinde sıkıştırmak anlamına
+          gelmektedir.
+        </p>
+      </a>
+    </div>
+
+    <div class="card">
+      <h2 id="scrollspyHeading2" class="card-title">Sohbet Botu</h2>
+      <a href="{% url 'chatbot' %}">
+        <img src="{% static 'pexels-alex-knight-2599244.jpg' %}" alt="" />
+        <p class="card-desc" style="color: black">
+          Sohbet botu, insanlarla doğal bir şekilde konuşarak etkileşim kuran
+          bir yazılım uygulamasıdır. Sohbet botları, farklı sektörlerde farklı
+          amaçlarla yaygın şekilde kullanılır.
+        </p>
+      </a>
+    </div>
+    <div class="card">
+      <h2 id="scrollspyHeading3" class="card-title">Duygu Durum Analizi</h2>
+      <a href="{% url 'sentiment' %}">
+        <img src="{% static 'wall-5.jpeg' %}" alt="" />
+        <p class="card-desc" style="color: black">
+          Duygu analizi temel olarak bir metin analizi (text analysis) olup
+          verilen metnin duygusal olarak ifade etmek istediği sınıfı (pozitif,
+          negatif ve nötr) belirlemeyi amaçlar. Duygu analizi, firmaların sunmuş
+          oldukları hizmet ve ürünlerin müşterilerinin gözündeki yerine anlamak
+          için kullanılır.
+        </p>
+      </a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

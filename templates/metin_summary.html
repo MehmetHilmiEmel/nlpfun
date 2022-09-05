@@ -1,0 +1,24 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+<p>
+    <h1 style="color:black;">
+        METİN ÖZETLEME
+    </h1>
+</p>
+<form action="{% url 'metin_summary_sonuc' %}" method="POST">
+  {% csrf_token %}
+  <textarea
+    name="metin"
+    class="form-control"
+    placeholder="Leave a comment here"
+    id="floatingTextarea2"
+    style="height: 100px"
+    cols="100"
+  ></textarea
+  ><br />
+  <button type="submit" class="btn btn-primary btn-lg">Gönder</button>
+</form>
+
+<div class="card">
+  <div class="card-body text-center">Özet : {{text}}</div>
+</div>
+{% endblock %}
