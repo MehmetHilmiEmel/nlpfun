@@ -7,12 +7,27 @@ import joblib
 import torch
 from googletrans import Translator
 
+from transformers import AutoModelForSequenceClassification, AutoTokenizer, pipeline
+model = AutoModelForSequenceClassification.from_pretrained("savasy/bert-base-turkish-sentiment-cased")
+tokenizer = AutoTokenizer.from_pretrained("savasy/bert-base-turkish-sentiment-cased")
+same_pipe= pipeline("sentiment-analysis", tokenizer=tokenizer, model=model)
 
 
 
+import torch
+from transformers import BertTokenizerFast, EncoderDecoderModel
+ckpt = 'mrm8488/bert2bert_shared-turkish-summarization'
+same_pipe_token = BertTokenizerFast.from_pretrained(ckpt)
+same_pipe_model = EncoderDecoderModel.from_pretrained(ckpt)
 
-same_pipe_token=joblib.load("myapp/summary_token.joblib")
-same_pipe_model=joblib.load("myapp/summary_model.joblib")
+
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+
+same_pipe_token_chat = AutoTokenizer.from_pretrained("facebook/blenderbot-400M-distill")
+
+same_pipe_model_chat = AutoModelForSeq2SeqLM.from_pretrained("facebook/blenderbot-400M-distill")
+
+
 def generate_summary(text):
 
    inputs = same_pipe_token([text], padding="max_length", truncation=True, max_length=512, return_tensors="pt")
@@ -20,14 +35,6 @@ def generate_summary(text):
    attention_mask = inputs.attention_mask
    output = same_pipe_model.generate(input_ids, attention_mask=attention_mask)
    return same_pipe_token.decode(output[0], skip_special_tokens=True)
-
-
-same_pipe=joblib.load("myapp/sentiment.joblib")
-
-
-
-same_pipe_token_chat=joblib.load("myapp/chatbot_token.joblib")
-same_pipe_model_chat=joblib.load("myapp/chatbot_model.joblib")
 
 # Create your views here.
 def index(request):
