@@ -1,4 +1,4 @@
-# nlpfun.github.io
+
 # Projenin Tanımı
 Doğal Dil İşleme (Natural Language Processing - NLP) alanında uygulanan metin özetleme, sohbet botu, duygu durum analizi gibi bazı uygulamaların bulunduğu bir web sitesi.
 # Projenin Amacı
@@ -7,7 +7,7 @@ Bu projede, kullanıcıların bu uygulamalara kolay ve hızlı bir şekilde ula�
 Doğal dil işleme (natural language processing), bilgisayarlara insan dilini okuma, anlama ve yorumlama yeteneği veren bir yapay zeka uygulamasıdır. Bilgisayarların, insan duygularını ölçmesine ve insan dilinin hangi bölümlerinin önemli olduğunu belirlemesine yardımcı olur.<br />
 
 Bu projede doğal dil işleme alanında geliştirilen modellere kolayca ulaşabilmek için Hugging Face kütüphanesi kullanıldı. 
-# Huuging Face Nedir?
+# Hugging Face Nedir?
 ![alt text](https://time-to-reinvent.com/wp-content/uploads/2022/02/rectangle_large_type_2_6b3d7a7cdfb3af98774ab76a8aa9ef03.png) <br />
 Hugging Face Hub, insanların kolayca işbirliği yapabileceği ve birlikte makine öğrenimi oluşturabileceği çevrimiçi bir platformda, tümü açık kaynaklı ve herkese açık olan 60K'dan fazla model, 6K veri kümesi ve 6K demo uygulaması (Spaces) içeren bir platformdur. Hub, herkesin Makine Öğrenimi ile keşfedebileceği, deneyebileceği, işbirliği yapabileceği ve teknoloji oluşturabileceği merkezi bir yer olarak çalışır.
 
