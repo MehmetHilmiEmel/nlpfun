@@ -20,3 +20,32 @@ modelleri kullanıldı.<br />
 
 NOT: Sohbet botunun hali hazırda Türkçe ile eğitilmiş bir modeli olmadığı için projenin içinde python'un "googletrans" kütüphanesi eklendi. Kullanıcı tarafından girilen cümle ilk olarak İngilizce'ye çevrilip sonrasında modelin verdiği cevap İngilizce'den Türkçe'ye çevrildi.
 
+### Prerequisites
+- Python
+- Pip
+
+### Installation
+```bash
+pip install virtualenv
+```
+```bash
+virtualenv venv
+```
+
+# Activate the virtual environment
+```bash
+venv\Scripts\activate   # For Windows
+source venv/bin/activate # For macOS/Linux
+```
+
+# Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+# Run the application
+```bash
+python manage.py runserver
+```
+
+Uygulamaya http://127.0.0.1:8000/ adresinden erişilebilecektir.
